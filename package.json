@@ -1,0 +1,24 @@
+{ 
+	"name": "node-apache-log-format",
+	"description":"parses apache log entries into objects,and creates formatted strings",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nickolanack/node-apache-log-format.git"
+	},
+	"author": {
+		"name": "Nick Blackwell"
+	},
+	"keywords":["apache","log"],
+	"version": "1.0.0",
+	"url": "https://github.com/nickolanack/node-apache-log/issues",
+	"email": "nickblackwell82@gmail.com",
+	"homepage": "https://github.com/nickolanack/node-apache-log",
+	"license": "MIT",
+	"dependencies": { 
+		"colors": "latest"
+	},
+	"main": "./monitor.js"
+}
