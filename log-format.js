@@ -1,7 +1,10 @@
 module.exports = {
-     format: format
+     format: format, 
+     parse:parse
 }
-
+function parse(line, style){
+	return require('./apache-parse/'+style+'.js').parse(line);
+}
 
 function format(data){
 	
@@ -19,7 +22,7 @@ function format(data){
 	
 	['status', 'size', 'method', 'received', 'time', 'joomla', 'geolive'].forEach(function(formatter){
 		
-		var obj=require('./format/'+formatter+'.js').format(data);
+		var obj=require('./apache-format/'+formatter+'.js').format(data);
 		if(obj!==null&&(typeof obj)=='object'){
 			Object.keys(obj).forEach(function(k){
 				fobj[k]=obj[k];
