@@ -20,5 +20,5 @@
 	"dependencies": { 
 		"colors": "latest"
 	},
-	"main": "./monitor.js"
+	"main": "./log-format.js"
 }
