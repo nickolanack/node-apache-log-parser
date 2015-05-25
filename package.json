@@ -1,5 +1,5 @@
 { 
-	"name": "node-apache-log-format",
+	"name": "node-apache-log-parser",
 	"description":"parses apache log entries into objects,and creates formatted strings",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +20,5 @@
 	"dependencies": { 
 		"colors": "latest"
 	},
-	"main": "./log-format.js"
+	"main": "./log-parser.js"
 }
