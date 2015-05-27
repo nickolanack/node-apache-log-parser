@@ -20,5 +20,8 @@
 	"dependencies": { 
 		"colors": "latest"
 	},
-	"main": "./log-parser.js"
+	"main": "./log-parser.js",
+	"scripts": {
+    	"test": "node tests/test.js"
+  	}
 }
