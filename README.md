@@ -8,7 +8,9 @@ Simple Apache log file parser/printer-formatter
 
 var apachelog=require('node-apache-log-parser');
 
-var logObject=apachelog.parse(line, [fmt]); //line from log file, fmt is 'common' by default, supports 'error' for parsing error files
+// [line] a line from the apache log file, fmt is 'common' by default, 
+// supports 'error' for parsing error files
+var logObject=apachelog.parse(line, [fmt]);
 
 ```
 
