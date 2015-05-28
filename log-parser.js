@@ -3,7 +3,15 @@ module.exports = {
      parse:parse
 }
 function parse(line, style){
-	return require('./apache-parse/'+style+'.js').parse(line);
+	
+	if((typeof style)!=='string'){
+		style='common';
+	}
+	try{
+		return require('./apache-parse/'+style+'.js').parse(line);
+	}catch(e){
+		throw Error('Apache log parser failed to parse: \''+line+'\' - '+e.message);
+	}
 }
 
 function format(data){
