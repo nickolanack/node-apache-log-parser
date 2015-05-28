@@ -31,4 +31,4 @@ logs.forEach(function(line){
 	
 });
 
-assert(true,true);
+console.log('success!');
