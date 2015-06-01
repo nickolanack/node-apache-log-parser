@@ -1,6 +1,6 @@
 var assert = require("assert")
 
-var logs=[
+var stats=[
 
 '206.87.52.180 - nick [15/May/2015:11:01:56 -0700] "GET /themes/pmahomme/img/col_drop.png HTTP/1.1" 200 132 754 15271',
 '206.87.52.180 - nick [15/May/2015:11:01:56 -0700] "GET /navigation.php?ajax_request=1&token=a4b2b69ee7834acc2af3fe89f606f7ca&aPath=cm9vdA%3D%3D.Y2ZlZWJj&vPath=cm9vdA%3D%3D.Y2ZlZWJj&pos=0&pos2_name=&pos2_value=&searchClause=&searchClause2=&_nocache=1431712950420471185 HTTP/1.1" 200 2522 910 165872',
@@ -24,11 +24,14 @@ var logs=[
 
 var apache=require('../log-parser.js');
 
-logs.forEach(function(line){
+stats.forEach(function(line){
+	
 	assert('object', typeof apache.parse(line));
-	assert('object', typeof apache.parse(line, 'common'));
+	assert('object', typeof apache.parse(line, 'common')); //common works, but skips the 'stats' part
 	assert('object', typeof apache.parse(line, 'stats'));
+	
+	
 	
 });
 
-assert(true,true);
+console.log('success!');
